@@ -1,11 +1,15 @@
-from collections.abc import Iterator
+from typing import TYPE_CHECKING
 from unittest.mock import MagicMock, patch
 
 import pytest
 from external_resources_io.terraform import Action, ResourceChange
 
-from er_aws_msk_connect.app_interface_input import AppInterfaceInput
 from hooks.post_plan import MskConnectPlanValidator, TerraformJsonPlanParser
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
+
+    from er_aws_msk_connect.app_interface_input import AppInterfaceInput
 
 MOCK_ROLE_ARN = "arn:aws:iam::123456789012:role/my-msk-connect-role"
 

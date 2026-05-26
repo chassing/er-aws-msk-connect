@@ -1,8 +1,11 @@
-from unittest.mock import MagicMock
+from typing import TYPE_CHECKING
 
 import pytest
 
 from hooks_lib.aws_api import AWSApi
+
+if TYPE_CHECKING:
+    from unittest.mock import MagicMock
 
 
 @pytest.fixture
