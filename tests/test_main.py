@@ -1,11 +1,14 @@
 import json
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import pytest
 from external_resources_io.config import EnvVar
 
 from er_aws_msk_connect.__main__ import get_ai_input
 from er_aws_msk_connect.app_interface_input import AppInterfaceInput
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 @pytest.fixture(autouse=True)

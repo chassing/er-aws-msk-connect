@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Literal, Self
 
-from external_resources_io.input import AppInterfaceProvision  # noqa: TC002
+from external_resources_io.input import AppInterfaceProvision
 from pydantic import BaseModel, model_validator
 
 
