@@ -29,7 +29,7 @@ FROM base AS prod
 # get cdktf providers
 COPY --from=builder ${TF_PLUGIN_CACHE_DIR} ${TF_PLUGIN_CACHE_DIR}
 # get our app with the dependencies
-COPY --from=builder ${APP} ${APP}
+COPY --from=builder ${APP_ROOT} ${APP_ROOT}
 
 
 FROM prod AS test
